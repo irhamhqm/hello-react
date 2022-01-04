@@ -17,7 +17,11 @@ export default function UserForm() {
   }
   return (
     <form onSubmit={handleSubmit}>
-      <input placeholder="change user" value={userInput} onChange={handleChange} />
+      <input
+        placeholder="change user"
+        value={userInput}
+        onChange={handleChange}
+      />
       <button type="submit" value="Submit">submit</button>
     </form>
   )

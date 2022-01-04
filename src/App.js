@@ -10,6 +10,8 @@ import styles from './App.module.css';
 
 import UserContext from './UserContext';
 import UserForm from './UserForm';
+import Posts from './Posts';
+import PostDetail from './PostDetail';
 
 const user = {
   name: 'Irham',
@@ -31,11 +33,14 @@ function App() {
           <Link to="/todo">Todo</Link>
           <Link to="/counter">Counter</Link>
           <Link to="/form">User Form</Link>
+          <Link to="/posts">Posts</Link>
         </nav>
         <Routes>
           <Route path="/todo" element={<Todo />} />
           <Route path="/counter" element={<Counter />}/>
           <Route path="/form" element={<UserForm />}/>
+          <Route path="/posts" element={<Posts />} />
+          <Route path="/posts/:id" element={<PostDetail />}/>
           <Route path="/" element={<HelloWorld />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
